@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Агентство праздников "EventPro"</title>
+    <style>
+        /* Базовые стили */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+        /* Шапка */
+        header {
+            background: #1a1a2e;
+            color: #fff;
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #e2b04a;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin-left: 20px;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #e2b04a;
+        }
+        /* Главный баннер */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://images.unsplash.com/photo-1511795409834-ef04bbd61622?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover;
+            height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+        }
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        .btn {
+            display: inline-block;
+            background: #e2b04a;
+            color: #1a1a2e;
+            padding: 15px 30px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+        .btn:hover {
+            background: #c99a3e;
+        }
+        /* Услуги */
+        .services {
+            background: #f9f9f9;
+            text-align: center;
+        }
+        .services h2 {
+            font-size: 36px;
+            margin-bottom: 40px;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .service-card {
+            background: #fff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+        }
+        .service-card h3 {
+            color: #1a1a2e;
+            margin-bottom: 15px;
+        }
+        /* Портфолио */
+        .portfolio {
+            text-align: center;
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .portfolio-grid img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+        /* Контакты */
+        .contact {
+            background: #1a1a2e;
+            color: #fff;
+            text-align: center;
+        }
+        .contact form {
+            max-width: 500px;
+            margin: 30px auto 0;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        .contact input, .contact textarea {
+            padding: 15px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        .contact button {
+            background: #e2b04a;
+            color: #1a1a2e;
+            border: none;
+            padding: 15px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        /* Подвал */
+        footer {
+            background: #0f0f1a;
+            color: #aaa;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Шапка сайта -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">EventPro</div>
+            <nav>
+                <a href="#services">Услуги</a>
+                <a href="#portfolio">Портфолио</a>
+                <a href="#contact">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Главный экран -->
+    <section class="hero">
+        <div>
+            <h1>Организация мероприятий под ключ</h1>
+            <p>Свадьбы, корпоративы, дни рождения. Сделаем ваш праздник незабываемым!</p>
+            <a href="#contact" class="btn">Заказать праздник</a>
+        </div>
+    </section>
+
+    <!-- Услуги -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Наши услуги</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <h3>Свадьбы</h3>
+                    <p>Полная организация свадебного торжества: от выбора площадки до финального салюта.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Корпоративы</h3>
+                    <p>Проведение корпоративных праздников, тимбилдингов и деловых мероприятий любого масштаба.</p>
+                </div>
+                <div class="service-card">
+                    <h3>Дни рождения</h3>
+                    <p>Яркие и стильные праздники для детей и взрослых с индивидуальной программой.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Портфолио -->
+    <section id="portfolio" class="portfolio">
+        <div class="container">
+            <h2>Наши работы</h2>
+            <div class="portfolio-grid">
+                <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Свадьба">
+                <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Корпоратив">
+                <img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="День рождения">
+            </div>
+        </div>
+    </section>
+
+    <!-- Контакты -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Оставьте заявку</h2>
+            <p>Мы свяжемся с вами в течение 15 минут для обсуждения деталей.</p>
+            <form>
+                <input type="text" placeholder="Ваше имя" required>
+                <input type="tel" placeholder="Ваш телефон" required>
+                <textarea rows="4" placeholder="Расскажите о вашем мероприятии"></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Подвал -->
+    <footer>
+        <p>&copy; 2026 EventPro. Все права защищены.</p>
+    </footer>
+
+</body>
+</html>
